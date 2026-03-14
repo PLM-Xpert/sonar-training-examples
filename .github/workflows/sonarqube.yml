@@ -69,6 +69,6 @@ jobs:
       - name: Build and analyze
         shell: powershell
         run: |
-          ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"PLM-Xpert_PLMXWorkOrders_12b02bb6-d61f-4fc0-afcd-c167789abfc3" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          ${{ runner.temp }}\scanner\dotnet-sonarscanner begin /k:"PLM-Xpert_sonar-training-examples_49b13098-bc61-42d4-bfe3-37b86cf4d1af" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
           dotnet build
           ${{ runner.temp }}\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
